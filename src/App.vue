@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <a href="/"> index</a>
-    <a href="/IPFS"> IPFS</a>
-    <slot></slot>
-
+     <router-link to="/">index</router-link>
+     <router-link to="/IPFS">IPFS</router-link>
+      <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
