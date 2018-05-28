@@ -8,13 +8,14 @@
 
 
 <script>
+  import ContractsUtil from '../utils/ContractsUtil'
 
-import {HttpProviderUrl} from './src/assets/ContractService.js'
 
 
 export default {
   data() {
     var account;
+
     web3.eth.getAccounts(function(error, accounts) {
       if (error) {
           console.log(error)

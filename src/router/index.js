@@ -33,6 +33,3 @@ export default new Router({
   ]
 });
 
-window.onload=function(){
-
-}
