@@ -3,6 +3,8 @@
      <router-link to="/">index</router-link>
      <router-link to="/IPFS">IPFS</router-link>
      <router-link to="/PICS">PICS</router-link>
+     <router-link to="/TTVIP">TTVIP</router-link>
+
       <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
