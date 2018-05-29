@@ -14,35 +14,42 @@
   ContractsUtil.initContract()
   console.info("providers:"+ContractsUtil.web3Provider)
   console.info("contracts:"+ContractsUtil.TTVIP)
+
+  var promise=new Promise(function (resolve, reject) {
+           var web3 = window.web3
+           web3.eth.getAccounts(function(error, accounts) {
+              if (error) {
+                 console.log(error)
+                 reject(new Error('Unable to connect to Metamask'))
+              }else{
+                  console.info(accounts[0])
+                  resolve(accounts[0])
+              }
+            })
+         });
+  var account;
+  promise.then(function(value) {
+        account=value;
+        console.info("accP:"+account);
+   }, function(error) {
+       console.info("err:"+error);
+  })
+
+
 export default {
    data() {
      return {
-        message: 'Hello'
+        message: 'Hello',
+        account:account
      }
    },
   computed: {
      // 计算属性的 getter
-     account: function () {
-     return  new Promise(function (resolve, reject) {
-         var web3 = window.web3
-         web3.eth.getAccounts(function(error, accounts) {
-            if (error) {
-               console.log(error)
-               reject(new Error('Unable to connect to Metamask'))
-            }else{
-                console.info(accounts[0])
-                //resolve({account:accounts[0]})
-                  resolve("fwefgweg")
-            }
-          })
-       }).then(result=>result)
-     },
+    // account: function () {
+    //      return account
+    // },
      balance:function () {
-
-        web3.eth.getBalance("0xDB9aB489ed6b547121DC179C901D0F83d21e3692",function(error, b){
-            balance=b
-       })
-       return b
+       return 0
      }
   }
 }
