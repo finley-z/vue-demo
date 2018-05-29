@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       pics: [
-        "http://127.0.0.1:5001/api/v0/get?arg=QmPh2kkvrbt1hpUiofR6hvhQjs95wsvf6RYCwPRWPpjeSP",
+        "http://127.0.0.1:5001/api/v0/get?arg=QmchcfPAHs1CReG4HX1yu5YgZx6YJwJUuggDxXGJSyqi6p",
         "http://127.0.0.1:5001/api/v0/get?arg=QmYvxeoVS3DycU6qdLSLe3X2R9eg886yT7ZBFLW6BN4peT"
       ]
     }
