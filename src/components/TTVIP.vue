@@ -5,12 +5,8 @@
 </div>
 </template>
 
-
-
 <script>
-  import ContractsUtil from '../utils/ContractsUtil'
-
-
+import ContractsUtil from '../utils/ContractsUtil'
 
 export default {
   data() {
