@@ -12,7 +12,7 @@
 <script>
 import ipfsAPI from 'ipfs-api'
 const ipfsin = ipfsAPI({
-  host: '127.0.0.1',
+  host: '120.79.247.185',
   port: '5001',
   protocol: 'http'
 });
@@ -21,8 +21,8 @@ export default {
   data() {
     return {
       pics: [
-        "http://127.0.0.1:5001/api/v0/get?arg=QmchcfPAHs1CReG4HX1yu5YgZx6YJwJUuggDxXGJSyqi6p",
-        "http://127.0.0.1:5001/api/v0/get?arg=QmYvxeoVS3DycU6qdLSLe3X2R9eg886yT7ZBFLW6BN4peT"
+        "http://120.79.247.185:5001/api/v0/get?arg=QmcdnowvDR5YYiDGpgirrEciCcgbNFhDYivGfFDQtWwtXe",
+        "http://120.79.247.185:5001/api/v0/get?arg=QmYvxeoVS3DycU6qdLSLe3X2R9eg886yT7ZBFLW6BN4peT"
       ]
     }
   }

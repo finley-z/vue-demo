@@ -1,18 +1,17 @@
 import TTVIP from '../../static/contracts/TTVIP.json'
+import NoteData from '../../static/contracts/NoteData.json'
 import Web3 from 'web3'
 import TruffleContract from "truffle-contract"
 
-const HttpProviderUrl ="http://192.168.1.57:8545"
+const HttpProviderUrl ="http://47.106.106.193:8545"
 var web3Provider=null
 var contracts={}
 export default {
-  web3Provider,
-  contracts,
+
   // public method for encoding
   init: function (input) {
 
   },
-
   initWeb3: function () {
     // Is there an injected web3 instance?
     if (typeof web3 !== 'undefined') {
@@ -24,9 +23,12 @@ export default {
      web3 = new Web3(web3Provider)
   },
   initContract: function () {
-    var TTVIPArtifact = TTVIP
-    contracts.TTVIP = TruffleContract(TTVIPArtifact)
+    var NoteDataArtifact = NoteData
+    contracts.NoteData = TruffleContract(NoteDataArtifact)
     // Set the provider for our contract
-    contracts.TTVIP.setProvider(web3Provider)
-  }
+    contracts.NoteData.setProvider(web3Provider)
+  },
+  web3Provider,
+  HttpProviderUrl,
+  contracts
 }

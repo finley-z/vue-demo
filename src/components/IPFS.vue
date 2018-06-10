@@ -21,7 +21,7 @@
 <script>
 import ipfsAPI from 'ipfs-api'
 const ipfsin = ipfsAPI({
-  host: '127.0.0.1',
+  host: '120.79.247.185',
   port: '5001',
   protocol: 'http'
 });
@@ -68,7 +68,7 @@ export default {
     },
     getPic() {
       var that = this
-      ipfsin.files.get("QmPh2kkvrbt1hpUiofR6hvhQjs95wsvf6RYCwPRWPpjeSP", function(err, files) {
+      ipfsin.files.get("QmcdnowvDR5YYiDGpgirrEciCcgbNFhDYivGfFDQtWwtXe", function(err, files) {
         files.forEach((file) => {
           var src = file.content.toString('utf8')
           that.pic = src
