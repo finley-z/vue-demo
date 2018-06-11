@@ -12,6 +12,7 @@
 
   ContractsUtil.initWeb3()
   ContractsUtil.initContract()
+  ContractsUtil.checkNetWork()
 
   var promise=new Promise(function (resolve, reject) {
            var web3 = window.web3
@@ -58,7 +59,7 @@ export default {
   },
    methods: {
   send() {
-     NoteData.at("0x754d470f40ffa67c6091c03879baa31c8784deb0").then(function(instance){
+     NoteData.at("0xbf6e29b8ee3f4004cfa11c404676d342b12fd89a").then(function(instance){
         instance.setReply("0x1234f","0x7f2288f5bf47f3c82107ee77ec5a2dd9ae3a4ddf","i love you","{}", {from:account});
      }).then(function(result){
           console.info("res:"+result)
