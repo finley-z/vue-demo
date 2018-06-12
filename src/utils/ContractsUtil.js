@@ -3,7 +3,8 @@ import NoteData from '../../static/contracts/NoteData.json'
 import Web3 from 'web3'
 import TruffleContract from "truffle-contract"
 
-const HttpProviderUrl ="http://47.106.106.193:8545"
+// const HttpProviderUrl ="http://47.106.106.193:8545"
+const HttpProviderUrl ="http://192.168.1.57:8545"
 var web3Provider=null
 var contracts={}
 export default {
@@ -21,6 +22,19 @@ export default {
       web3Provider = new Web3.providers.HttpProvider(HttpProviderUrl)
     }
      web3 = new Web3(web3Provider)
+  },
+  checkNetWork:function () {
+    web3.version.getNetwork((err, netId) =>{
+      const networkId = parseInt(netId, 10)
+      if (err) {
+        alert("err:"+err)
+      }else{
+        alert("net:"+networkId);
+      }
+    })
+  },
+  checkAccount:function () {
+
   },
   initContract: function () {
     var NoteDataArtifact = NoteData
