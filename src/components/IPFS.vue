@@ -49,7 +49,6 @@ export default {
 
         })
       }
-
     },
     setAvatar() {
       this.$refs.avatarInput.click()
