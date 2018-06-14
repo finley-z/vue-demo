@@ -1,6 +1,8 @@
 <template>
 <div class="admin">
   <h1>hello ipfs</h1>
+      <img src="http://localhost:8080/ipfs/QmeXuNsvjTZj7pduZ9noaXNv2uKPGCwbB4f7gBmPCaoJJF"/>
+
   <li v-for="pic in pics">
     <img v-bind:src="pic" />
   </li>
@@ -21,8 +23,8 @@ export default {
   data() {
     return {
       pics: [
-        "http://120.79.247.185:5001/api/v0/get?arg=QmcdnowvDR5YYiDGpgirrEciCcgbNFhDYivGfFDQtWwtXe",
-        "http://120.79.247.185:5001/api/v0/get?arg=QmYvxeoVS3DycU6qdLSLe3X2R9eg886yT7ZBFLW6BN4peT"
+        "http://localhost:8080/ipfs/QmXq1jH7deV4wuotCauPfGe7XMYZKTyX4XGAypBgNGKntK",
+        "http://localhost:8080/ipfs/QmXq1jH7deV4wuotCauPfGe7XMYZKTyX4XGAypBgNGKntK"
       ]
     }
   }
